@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+  }
+  
+  body {
+    background-color: #080f28;
+  }
+
+  input, button, #imagenVacia {
+    cursor: pointer;
+  }
+  
+  .cont {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .cont-card {
+    width: 100%;
+    height: 100%;
+    padding: 6.5px;
+  }
+  
+  .card, #overlay-edit {
+    width: 220px;
+    height: 400px;
+    /* padding: 6.5px; */
+    border-radius: 11px;
+    background-color: #354374;
+    color: #f5f6f7;
+    box-shadow: 0px 0px 11px 0px #5555557a;
+    margin: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .cardCreate {
+    background-color: rgb(0, 143, 0);
+    border: 7px rgb(0, 56, 0) dashed;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 75%;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-info h4 {
+    text-align: center;
+  }
+  
+  .card-info p,
+  .card-info h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .card:hover, #overlay-edit:hover {
+    box-shadow: 0px 0px 11px 0px #000000;
+    z-index: 2;
+    transform: scale(1.1);
+  }
+  
+  .card:hover .overlay, #overlay-edit {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    font-size: 17px;
+    opacity: 0;
+    padding: 6.5px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 51, 121);
+    border-radius: 11px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #span-overlay {
+    font-size: 2em;
+    margin: 2px;
+    font-weight: bold;
+    color: green;
+  }
+
+  .btn-buy {
+    width: 120px;
+    border: 0;
+    font-size: 20px;
+    background-color: green;
+    color: antiquewhite;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  /* #form-edit {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  } */
+  
+  /* .iColor {
+    width: 60%;
+    margin: 5px auto;
+  }
+  
+  #inputFile {
+    display: none;
+  }
+  
+
+   */
+  #tittle {
+    margin: auto;
+    color: #bc2e1e;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4,
+      2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd,
+      3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4,
+      5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd,
+      6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4,
+      8px 7px 0px #5dabcd;
+    color: #3b337e;
+    width: 100%;
+    height: 14vh;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 63px;
+    border-bottom: 2px solid #378ab4;
+  }
+
+  #delete {
+    position:absolute;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+ 
+  }
+
+  #delete button, #delete a {
+    background-color: rgb(230, 7, 7);
+    border-radius: 8px;
+    padding: 10px;
+    color: #ece3e3;
+    border: none;
+    font-size: 20px;
+  }
+
+  #delete a {
+    background-color: orange;
+    color: black;
+  }
+
+  /* Crear Pelicula */
+
+  .cont-edit {
+    width: 100%;
+    height: 86vh;
+    display: flex;
+  }
+
+  .cards-edit, .form-edicion{
+    width: 50%;
+    height: 100%;
+  }
+
+  .form-edicion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 4px dashed #378ab4;
+  }
+
+  #formulario {
+    width: 82%;
+    height: 88%;
+    /* display: flex;
+    flex-direction: column; */
+    border-radius: 13px;
+    overflow: hidden;
+    background-color: #354374;
+  }
+
+  .cont-p1 {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-form, .textarea{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #input-file {
+    display: none;
+  }
+  .textarea textarea {
+    border-radius: 4px;
+    padding: 3px;
+    resize: none;
+    outline: none;
+    color: black  ;
+    background-color: #667ed4;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .textarea textarea::placeholder {
+    color: #000000;
+  }
+
+  .input-form input {
+    width: 83%;
+    margin: 2px;
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+  
+    outline: none;
+    border-radius: 10px;
+    background-color: #667ed4;
+    color: black;
+  }
+
+  .input-form input::placeholder {
+    color: black;
+  }
+
+  .cont-p2 {
+    width: 90%;
+    height: 28%;
+    text-align: center;
+    border-radius: 12px;
+    margin: auto;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #667ed48f ;
+  }
+  .color-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    flex-direction: column-reverse;
+    width: 20%;
+    height: 85%;
+  }
+
+  .color-text input {
+    width: 75%;
+    height: 50%;
+    border: none;
+    background-color: transparent;
+  }
+
+
+  .l {
+    padding: 3.6px;
+    margin: 1px;
+  }
+
+  #btn-cont {
+    width: 100%;
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #btnEnviar {
+    width: 20%;
+    padding: 14px;
+    border: none;
+    border-radius: 100px;
+    background-color: #667ed4;
+
+  }
+
+
+  #sf {
+    column-rule: #b6a7a7;
+  }
+
+  footer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+
+  }
+
+  footer a {
+    text-decoration: none;
+    color: rgb(4, 1, 49) ;
+    font-size: 20px;
+    background-color: #5e76c5;
+    padding: 10px;
+    border-radius: 10px;
+
+  }

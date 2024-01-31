@@ -1,0 +1,12 @@
+.card {
+    width: 350px;
+    height: 403px;
+}
+
+.cont-card img {
+    height: 65%;
+}
+
+.card-info {
+    height: 35%;
+}
